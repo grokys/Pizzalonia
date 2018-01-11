@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <DockPanel>
+    <TextBlock DockPanel.Dock="Top" FontSize="24">Please select your pizza:</TextBlock>
+    <ListBox Items="{Binding Items}" BorderThickness="0"
+             HorizontalAlignment="Center" VerticalAlignment="Center">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <DockPanel>
+            <Image DockPanel.Dock="Left" Source="resm:Pizzalonia.Assets.pizza.png" Margin="8"/>
+            <TextBlock FontSize="24" VerticalAlignment="Center" Margin="4" Text="{Binding Name}"/>
+          </DockPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </DockPanel>
+</UserControl>
